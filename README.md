@@ -5,6 +5,20 @@ Use at your own risk.
 
 ## Quick start
 
+0. Install zsh and set as login shell.
+
+    On Ubuntu do:
+    ```
+    $ sudo apt-get install zsh
+    $ chsh -s /usr/bin/zsh
+    ```
+
+    On Mac OS X do:
+    ```
+    $ brew install zsh
+    $ chsh -s /usr/local/bin/zsh
+    ```
+
 1. Clone this repository.
     
     ```
@@ -14,6 +28,7 @@ Use at your own risk.
 2. Initialize the submodules.
 
     ```
+    $ cd ~/.zsh
     $ git submodule init
     $ git submodule update
     ```
