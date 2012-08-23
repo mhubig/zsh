@@ -21,7 +21,7 @@ autoload -Uz compinit
 compinit -d  ~/.zsh/compdump
 
 # git prompt feature
-source ~/.zsh/git-prompt/zshrc.sh
+source ~/.zsh/zsh-git-prompt/zshrc.sh
 ZSH_THEME_GIT_PROMPT_PREFIX=" "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
