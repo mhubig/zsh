@@ -39,10 +39,4 @@ __EXECUTED_GIT_COMMAND=1
 PROMPT='[%n@%m (%c)$(git_super_status) ]$ '
 
 # aliases
-alias ls='ls -G'
-alias l='ls -alG'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias vim='mvim'
-alias setup-context='source /usr/local/context/tex/setuptex'
+source ~/.zsh/aliases
