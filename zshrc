@@ -22,6 +22,7 @@ compinit -d  ~/.zsh/compdump
 
 # git prompt feature
 source ~/.zsh/zsh-git-prompt/zshrc.sh
+export __GIT_PROMPT_DIR=~/.zsh/zsh-git-prompt
 ZSH_THEME_GIT_PROMPT_PREFIX=" "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
