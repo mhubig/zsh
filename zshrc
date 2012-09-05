@@ -40,3 +40,6 @@ PROMPT='[%n@%m (%c)$(git_super_status) ]$ '
 
 # aliases
 source ~/.zsh/aliases
+
+# functions
+source ~/.zsh/functions
