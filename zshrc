@@ -35,6 +35,9 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="…"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
 __EXECUTED_GIT_COMMAND=1
 
+# git flow completition
+source /usr/local/share/zsh/site-functions/git-flow-completion.zsh
+
 # prompt
 PROMPT='[%n@%m (%c)$(git_super_status) ]$ '
 
