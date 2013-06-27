@@ -8,7 +8,6 @@ path+=/usr/local/sbin
 path+=/usr/sbin
 path+=/sbin
 path+=/usr/texbin
-path+=/usr/local/share/python
 
 # Setting the PYTHONPATH and PYTHONSTARTUP
 PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
