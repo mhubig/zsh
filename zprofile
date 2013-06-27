@@ -15,7 +15,6 @@ PYTHONPATH=/usr/local/lib/python2.7:$PYTHONPATH
 PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 PYTHONPATH=/usr/local/lib/python2.7/site_packages:$PYTHONPATH
 export PYTHONPATH
-export PYTHONSTARTUP=~/.pythonrc
 
 # OSFontDir for Context
 OSFONTDIR=/System/Library/Fonts
