@@ -1,5 +1,6 @@
 # Setting the PATH Variable
 path=(~/bin(N-/))
+path+=(~/.cabal/bin(N-/))
 path+=/usr/local/bin
 path+=/usr/bin
 path+=/bin
