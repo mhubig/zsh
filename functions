@@ -6,3 +6,8 @@ mutt () {
         echo usage: mutt name
     fi
 }
+
+# print my public IPv4 Address
+ip () {
+    command dig +short myip.opendns.com @resolver1.opendns.com
+}
