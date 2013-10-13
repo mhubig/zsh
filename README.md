@@ -16,8 +16,10 @@ Use at your own risk.
     On Mac OS X do:
     ```
     $ brew install zsh
-    $ chsh -s /usr/local/bin/zsh
     ```
+    
+    Then set the shell in the system preference pane, like here:
+    ![alt text](http://i.stack.imgur.com/uF72p.png) 
 
 1. Clone this repository.
     
