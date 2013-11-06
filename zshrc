@@ -8,11 +8,6 @@ export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
 export LESSEDIT='mvim ?lm+%lm. %f'
 export TERM=xterm-256color
 
-# # virtualenvwrapper: maybe I don't wanna use it any more ...
-# export WORKON_HOME=$HOME/.virtualenvs
-# export PROJECT_HOME=$HOME/Development
-# source /usr/local/share/python/virtualenvwrapper.sh
-
 # options
 setopt appendhistory autocd extendedglob nomatch notify correct_all
 unsetopt beep
