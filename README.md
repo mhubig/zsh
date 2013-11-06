@@ -17,12 +17,12 @@ Use at your own risk.
     ```
     $ brew install zsh
     ```
-    
+
     Then set the shell in the system preference pane, like here:
     ![alt text](http://i.stack.imgur.com/uF72p.png) 
 
 1. Clone this repository.
-    
+
     ```
     $ git clone https://github.com/mhubig/zsh.git ~/.zsh
     ```
@@ -36,7 +36,7 @@ Use at your own risk.
     ```
 
 3. Create the `~/.zshrc` and `~/.zprofile` links.
-    
+
     ```
     $ ln -s ~/.zsh/zshrc ~/.zshrc
     $ ln -s ~/.zsh/zprofile ~/.zprofile
