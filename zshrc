@@ -46,3 +46,6 @@ source ~/.zsh/aliases
 
 # functions
 source ~/.zsh/functions
+
+# local stuff like AWS Credentials
+source ~/.zsh/local
