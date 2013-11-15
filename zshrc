@@ -7,18 +7,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 #
-# ZSH Settings
-#
-
-HISTFILE=~/.zsh/zhistory
-HISTSIZE=10000
-SAVEHIST=10000
-
-#
 # Aliases
 #
 
-if [[ -s "${ZDOTDIR:-$HOME}/.zsh/aliases" ]]; then
+if [[ -s "$HOME/.zsh/zaliases" ]]; then
   source ~/.zsh/zaliases
 fi
 
@@ -26,7 +18,7 @@ fi
 # Functions
 #
 
-if [[ -s "${ZDOTDIR:-$HOME}/.zsh/functions" ]]; then
+if [[ -s "$HOME/.zsh/zfunctions" ]]; then
   source ~/.zsh/zfunctions
 fi
 
@@ -34,6 +26,6 @@ fi
 # Local stuff
 #
 
-if [[ -s "${ZDOTDIR:-$HOME}/.zsh/local" ]]; then
+if [[ -s "$HOME/.zsh/zlocal" ]]; then
   source ~/.zsh/zlocal
 fi
