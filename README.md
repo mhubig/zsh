@@ -1,44 +1,39 @@
 ## About
 
-This is the small `~/.zshrc` file I use on Mac and Linux.
-Use at your own risk.
+This are the ZSH configuration files I use on Mac and Linux. They are now based
+on the mighty [prezto](https://github.com/sorin-ionescu/prezto). Use at your
+own risk.
 
 ## Quick start
 
-0. Install zsh and set as login shell.
+00. Install zsh and set as login shell.
 
     On Ubuntu do:
-    ```
-    $ sudo apt-get install zsh
-    $ chsh -s /usr/bin/zsh
-    ```
+
+        $ sudo apt-get install zsh
+        $ chsh -s /usr/bin/zsh
 
     On Mac OS X do:
-    ```
-    $ brew install zsh
-    ```
+
+        $ brew install zsh
 
     Then set the shell in the system preference pane, like here:
-    ![alt text](http://i.stack.imgur.com/uF72p.png) 
+    ![alt text](http://i.stack.imgur.com/uF72p.png)
 
-1. Clone this repository.
+00. Clone this repository.
 
-    ```
-    $ git clone https://github.com/mhubig/zsh.git ~/.zsh
-    ```
+        $ git clone https://github.com/mhubig/zsh.git ~/.zsh
 
-2. Initialize the submodules.
+00. Clone the mighty prezto.
 
-    ```
-    $ cd ~/.zsh
-    $ git submodule init
-    $ git submodule update
-    ```
+        $ git clone --recursive git@github.com:sorin-ionescu/prezto.git ~/.zprezto
 
-3. Create the `~/.zshrc` and `~/.zprofile` links.
+00. Start ZSH and link the config files.
 
-    ```
-    $ ln -s ~/.zsh/zshrc ~/.zshrc
-    $ ln -s ~/.zsh/zprofile ~/.zprofile
-    ```
+        $ zsh
+        % zfiles=(zlogin zlogout zpreztorc zprofile zshenv zshrc)
+        % for file in $zfiles; do
+              ln -s "$HOME/.zsh/$file" "$HOME/.${file:t}"
+          done
 
+00. Now restart your terminal!

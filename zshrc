@@ -1,56 +1,39 @@
-# history
-HISTFILE=~/.zsh/history
-HISTSIZE=1000
-SAVEHIST=1000
+#
+# Source Prezto.
+#
 
-# variables
-export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
-export LESSEDIT='mvim ?lm+%lm. %f'
-export TERM=xterm-256color
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-# locales
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+#
+# ZSH Settings
+#
 
-# options
-setopt appendhistory autocd extendedglob nomatch notify correct_all
-unsetopt beep
-bindkey -e
+HISTFILE=~/.zsh/zhistory
+HISTSIZE=10000
+SAVEHIST=10000
 
-# completition
-fpath=(/usr/local/share/zsh-completions $fpath)
-fpath=(~/.zsh/completion $fpath)
-zstyle :compinstall filename '/Users/mhubig/.zshrc'
-zstyle ':completion:*' menu yes select
-autoload -Uz compinit
-compinit -d  ~/.zsh/compdump
+#
+# Aliases
+#
 
-# git prompt feature
-source ~/.zsh/zsh-git-prompt/zshrc.sh
-export __GIT_PROMPT_DIR=~/.zsh/zsh-git-prompt
-ZSH_THEME_GIT_PROMPT_PREFIX=" "
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
-ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
-ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}●"
-ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}✖"
-ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[blue]%}✚"
-ZSH_THEME_GIT_PROMPT_REMOTE=""
-ZSH_THEME_GIT_PROMPT_UNTRACKED="…"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
-__EXECUTED_GIT_COMMAND=1
+if [[ -s "${ZDOTDIR:-$HOME}/.zsh/aliases" ]]; then
+  source ~/.zsh/zaliases
+fi
 
-# git flow completition
-source /usr/local/share/zsh/site-functions/git-flow-completion.zsh
+#
+# Functions
+#
 
-# prompt
-PROMPT='[%n@%m (%c)$(git_super_status) ]$ '
+if [[ -s "${ZDOTDIR:-$HOME}/.zsh/functions" ]]; then
+  source ~/.zsh/zfunctions
+fi
 
-# aliases
-source ~/.zsh/aliases
+#
+# Local stuff
+#
 
-# functions
-source ~/.zsh/functions
-
-# local stuff like AWS Credentials
-source ~/.zsh/local
+if [[ -s "${ZDOTDIR:-$HOME}/.zsh/local" ]]; then
+  source ~/.zsh/zlocal
+fi
