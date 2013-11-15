@@ -8,6 +8,10 @@ export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
 export LESSEDIT='mvim ?lm+%lm. %f'
 export TERM=xterm-256color
 
+# locales
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # options
 setopt appendhistory autocd extendedglob nomatch notify correct_all
 unsetopt beep
@@ -15,6 +19,7 @@ bindkey -e
 
 # completition
 fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completion $fpath)
 zstyle :compinstall filename '/Users/mhubig/.zshrc'
 zstyle ':completion:*' menu yes select
 autoload -Uz compinit
