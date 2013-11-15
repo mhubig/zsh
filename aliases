@@ -4,5 +4,13 @@ alias l='ls -alG'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias vim='mvim'
-alias setup-context='source /usr/local/context/tex/setuptex'
+
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+    alias  vim='mvim -p'                     # open in new window
+    alias rvim='mvim -p --remote-tab-silent' # open in existing window
+fi
+
+if [[ "$OSTYPE" =~ ^linux  ]]; then
+    alias  vim='gvim -p'                     # open in new window
+    alias rvim='mvim -p --remote-tab-silent' # open in existing window
+fi
