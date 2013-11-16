@@ -1,4 +1,10 @@
-# aliases
+#
+# Defines some usefull aliases post-zshrc.
+#
+# Authors:
+#   Markus Hubig <mhubig@gmail.com>
+#
+
 alias ls='ls -G'
 alias l='ls -alG'
 alias grep='grep --color=auto'

@@ -3,6 +3,7 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   Markus Hubig <mhubig@gmail.com>
 #
 
 # Print the message.

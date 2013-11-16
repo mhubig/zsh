@@ -1,4 +1,12 @@
 #
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   Markus Hubig <mhubig@gmail.com>
+#
+
+#
 # Source Prezto.
 #
 

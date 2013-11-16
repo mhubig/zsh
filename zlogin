@@ -3,7 +3,7 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+#   Markus Hubig <mhubig@gmail.com>
 
 # Execute code that does not affect the current session in the background.
 {

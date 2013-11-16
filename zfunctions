@@ -1,4 +1,10 @@
-# functions
+#
+# Defines some usefull functions, post-zshrc.
+#
+# Authors:
+#   Markus Hubig <mhubig@gmail.com>
+#
+
 mutt () {
     if (( $# == 1 )) ; then
         command mutt -F ~/.mutt-$1/muttrc
