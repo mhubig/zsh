@@ -1,3 +1,10 @@
+# Defines environment variables.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   Markus Hubig <mhubig@gmail.com>
+#
+
 #
 # Terminal
 #
@@ -48,36 +55,8 @@ export PYTHONPATH
 GOPATH=$HOME/Development/go
 export GOPATH
 
-CABALHOME=$HOME/.cabal
-export CABALHOME
-
-#
-# Paths
-#
-
-typeset -gU cdpath fpath mailpath path
-
-# Set the list of directories that Zsh searches for programs.
-path=(
-  $HOME/bin
-  $GOPATH/bin
-  $CABALHOME/bin
-  /usr/local/opt/ruby/bin
-  /usr/local/bin
-  /usr/bin
-  /bin
-  /usr/local/sbin
-  /usr/sbin
-  /sbin
-  /usr/texbin
-  $path
-)
-
-# Set the the list of directories that cd searches.
-cdpath=(
-  $cdpath
-)
-
+SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+export SSL_CERT_FILE
 
 #
 # Less
