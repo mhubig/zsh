@@ -58,6 +58,33 @@ export GOPATH
 SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 export SSL_CERT_FILE
 
+
+#
+# Paths
+#
+
+typeset -gU cdpath fpath mailpath path
+
+# Set the the list of directories that cd searches.
+cdpath=(
+  $cdpath
+)
+
+# Set the list of directories that Zsh searches for programs.
+path=(
+  $HOME/bin
+  $GOPATH/bin
+  /usr/local/opt/ruby/bin
+  /usr/local/bin
+  /usr/bin
+  /bin
+  /usr/local/sbin
+  /usr/sbin
+  /sbin
+  /usr/texbin
+)
+
+
 #
 # Less
 #
