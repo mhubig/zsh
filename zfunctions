@@ -17,3 +17,8 @@ mutt () {
 ip () {
     command dig +short myip.opendns.com @resolver1.opendns.com
 }
+
+# create a scratch file for random notes
+scratch () {
+    gvim ~/Dropbox\ \(Privat\)/Scratch/$(openssl rand -base64 10 | tr -dc 'a-zA-Z').txt
+}
