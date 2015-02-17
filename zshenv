@@ -14,16 +14,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 #
-# Editor
-#
-
-if [[ "$OSTYPE" == darwin* ]]; then
-  export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
-  export VISUAL='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
-  export PAGER='less'
-fi
-
-#
 # Language
 #
 
@@ -32,32 +22,6 @@ if [[ -z "$LANG" ]]; then
   export LC_CTYPE='en_US.UTF-8'
   export LC_ALL='en_US.UTF-8'
 fi
-
-#
-# Browser
-#
-
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
-
-
-#
-# Development
-#
-
-PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
-PYTHONPATH=/usr/local/lib/python2.7:$PYTHONPATH
-PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-PYTHONPATH=/usr/local/lib/python2.7/site_packages:$PYTHONPATH
-export PYTHONPATH
-
-GOPATH=$HOME/Development/go
-export GOPATH
-
-SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-export SSL_CERT_FILE
-
 
 #
 # Paths
@@ -84,6 +48,19 @@ path=(
   /usr/texbin
 )
 
+#
+# Temporary Files
+#
+
+if [[ ! -d "$TMPDIR" ]]; then
+  export TMPDIR="/tmp/$USER"
+  mkdir -p -m 700 "$TMPDIR"
+fi
+
+TMPPREFIX="${TMPDIR%/}/zsh"
+if [[ ! -d "$TMPPREFIX" ]]; then
+  mkdir -p "$TMPPREFIX"
+fi
 
 #
 # Less
@@ -101,15 +78,42 @@ if (( $+commands[lesspipe.sh] )); then
 fi
 
 #
-# Temporary Files
+# Editor
 #
 
-if [[ ! -d "$TMPDIR" ]]; then
-  export TMPDIR="/tmp/$USER"
-  mkdir -p -m 700 "$TMPDIR"
+if [[ "$OSTYPE" == darwin* ]]; then
+  export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+  export VISUAL='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+  export PAGER='less'
 fi
 
-TMPPREFIX="${TMPDIR%/}/zsh"
-if [[ ! -d "$TMPPREFIX" ]]; then
-  mkdir -p "$TMPPREFIX"
+#
+# Browser
+#
+
+if [[ "$OSTYPE" == darwin* ]]; then
+  export BROWSER='open'
 fi
+
+#
+# VM Stuff
+#
+
+export VAGRANT_DEFAULT_PROVIDER='virtualbox'
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/markus/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
+#
+# Homebrew Cask setings
+#
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+#
+# Ansible stuff
+#
+
+export ANSIBLE_CONFIG=ansible.cfg
+export ANSIBLE_HOSTS=hosts
+
