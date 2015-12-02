@@ -97,11 +97,11 @@ fi
 #
 # VM Stuff
 #
-
-export VAGRANT_DEFAULT_PROVIDER='virtualbox'
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/markus/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+#eval "$(docker-machine env dev)"
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/markus/.docker/machine/machines/dev"
+export DOCKER_MACHINE_NAME="dev"
 
 #
 # Homebrew Cask setings
