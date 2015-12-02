@@ -104,15 +104,14 @@ export DOCKER_CERT_PATH="/Users/markus/.docker/machine/machines/dev"
 export DOCKER_MACHINE_NAME="dev"
 
 #
-# Homebrew Cask setings
+# Homebrew setings
 #
-
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_GITHUB_API_TOKEN=a0d5676a2627a9fcdf7ed053b5623dd17e507c55
 
 #
 # Ansible stuff
 #
-
 export ANSIBLE_CONFIG=ansible.cfg
 export ANSIBLE_HOSTS=hosts
 
