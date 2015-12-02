@@ -123,3 +123,18 @@ export GOPATH=$HOME/Development/go
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 
+#
+# Python stuff
+#
+# Load pyenv automatically
+export PYENV_ROOT=/usr/local/var/pyenv
+export CFLAGS="-I$(brew --prefix openssl)/include"
+export LDFLAGS="-L$(brew --prefix openssl)/lib"
+
+if which pyenv > /dev/null; then
+    eval "$(pyenv init -)";
+fi
+
+if which pyenv-virtualenv-init > /dev/null; then
+    eval "$(pyenv virtualenv-init -)";
+fi
