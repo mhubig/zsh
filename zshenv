@@ -115,3 +115,11 @@ export HOMEBREW_GITHUB_API_TOKEN=a0d5676a2627a9fcdf7ed053b5623dd17e507c55
 export ANSIBLE_CONFIG=ansible.cfg
 export ANSIBLE_HOSTS=hosts
 
+#
+# Go
+#
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/Development/go
+export PATH=$GOROOT/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+
