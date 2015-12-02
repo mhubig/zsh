@@ -13,7 +13,6 @@ fi
 #
 # Terminal
 #
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export TERM=xterm-256color
 fi
@@ -21,7 +20,6 @@ fi
 #
 # Language
 #
-
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
   export LC_CTYPE='en_US.UTF-8'
@@ -31,7 +29,6 @@ fi
 #
 # Paths
 #
-
 typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
@@ -70,7 +67,6 @@ fi
 #
 # Less
 #
-
 # Set the default Less options.
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
 # Remove -X and -F (exit if the content fits on one screen) to enable it.
@@ -85,7 +81,6 @@ fi
 #
 # Editor
 #
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
   export VISUAL='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
@@ -95,7 +90,6 @@ fi
 #
 # Browser
 #
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi

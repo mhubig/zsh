@@ -63,6 +63,12 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # zstyle ':prezto:module:gnu-utility' prefix 'g'
 
 #
+# History
+#
+
+unsetopt sharehistory
+
+#
 # History Substring Search
 #
 
