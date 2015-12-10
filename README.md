@@ -1,8 +1,7 @@
 ## About
 
-This are the ZSH configuration files I use on Mac and Linux. They are now based
-on the mighty [prezto](https://github.com/sorin-ionescu/prezto). Use at your
-own risk.
+This are the ZSH configuration files I use on Mac and Linux. They are now based on
+the mighty [prezto](https://github.com/sorin-ionescu/prezto). Use at your own risk.
 
 ## Quick start
 
@@ -35,5 +34,10 @@ own risk.
         % for file in $zfiles; do
               ln -s "$HOME/.zsh/$file" "$HOME/.${file:t}"
           done
+
+00. Make your own copy of the zlocal file.
+
+        $ cp ~/.zsh/zlocal.example ~/.zsh/zlocal
+        $ vim ~/.zsh/zlocal
 
 00. Now restart your terminal!
