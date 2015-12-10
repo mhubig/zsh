@@ -100,14 +100,13 @@ fi
 #eval "$(docker-machine env dev)"
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/markus/.docker/machine/machines/dev"
-export DOCKER_MACHINE_NAME="dev"
+export DOCKER_CERT_PATH="/Users/markus/.docker/machine/machines/develop"
+export DOCKER_MACHINE_NAME="develop"
 
 #
 # Homebrew setings
 #
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export HOMEBREW_GITHUB_API_TOKEN=a0d5676a2627a9fcdf7ed053b5623dd17e507c55
 
 #
 # Ansible stuff
