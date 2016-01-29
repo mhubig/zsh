@@ -118,15 +118,15 @@ export PATH=$GOPATH/bin:$PATH
 # Python stuff
 #
 # Load pyenv automatically
-#export PYENV_ROOT=/usr/local/var/pyenv
-#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-#export CFLAGS="-I$(brew --prefix openssl)/include"
-#export LDFLAGS="-L$(brew --prefix openssl)/lib"
+export PYENV_ROOT=/usr/local/var/pyenv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export CFLAGS="-I$(brew --prefix openssl)/include"
+export LDFLAGS="-L$(brew --prefix openssl)/lib"
 
-#if which pyenv > /dev/null; then
-#    eval "$(pyenv init -)";
-#fi
+if which pyenv > /dev/null; then
+    eval "$(pyenv init -)";
+fi
 
-#if which pyenv-virtualenv-init > /dev/null; then
-#    eval "$(pyenv virtualenv-init -)";
-#fi
+if which pyenv-virtualenv-init > /dev/null; then
+    eval "$(pyenv virtualenv-init -)";
+fi
