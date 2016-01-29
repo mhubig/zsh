@@ -21,11 +21,11 @@ the mighty [prezto](https://github.com/sorin-ionescu/prezto). Use at your own ri
 
 00. Clone this repository.
 
-        $ git clone https://github.com/mhubig/zsh.git ~/.zsh
+        $ git clone git@github.com:mhubig/zsh.git ~/.zsh
 
 00. Clone the zgen.
 
-        $ git clone https://github.com/tarjoilija/zgen.git ~/.zgen
+        $ git clone git@github.com:tarjoilija/zgen.git ~/.zgen
 
 00. Start ZSH and link the config files.
 
