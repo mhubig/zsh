@@ -23,14 +23,14 @@ the mighty [prezto](https://github.com/sorin-ionescu/prezto). Use at your own ri
 
         $ git clone https://github.com/mhubig/zsh.git ~/.zsh
 
-00. Clone the mighty prezto.
+00. Clone the zgen.
 
-        $ git clone --recursive git@github.com:sorin-ionescu/prezto.git ~/.zprezto
+        $ git clone https://github.com/tarjoilija/zgen.git ~/.zgen
 
 00. Start ZSH and link the config files.
 
         $ zsh
-        % zfiles=(zlogin zlogout zpreztorc zprofile zshenv zshrc)
+        % zfiles=(zlogin zlogout zprofile zshenv zshrc)
         % for file in $zfiles; do
               ln -s "$HOME/.zsh/$file" "$HOME/.${file:t}"
           done

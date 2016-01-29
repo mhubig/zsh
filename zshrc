@@ -7,12 +7,54 @@
 #
 
 #
-# Source Prezto.
+# Source and config zgen
 #
 
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+if [[ -s "${HOME}/.zgen/zgen.zsh" ]]; then
+
+  source "${HOME}/.zgen/zgen.zsh"
+
+  if ! zgen saved; then
+    echo "Creating a zgen save"
+
+    # prezto options
+    zgen prezto '*:*' color 'yes'
+    zgen prezto editor key-bindings 'emacs'
+    zgen prezto prompt theme 'sorin'
+    zgen prezto terminal auto-title 'yes'
+    zgen prezto syntax-highlighting highlighters \
+      'main' \
+      'brackets' \
+      'pattern' \
+      'cursor' \
+      'root'
+
+    # prezto and modules
+    zgen prezto
+    zgen prezto environment
+    zgen prezto terminal
+    zgen prezto editor
+    zgen prezto history
+    zgen prezto directory
+    zgen prezto spectrum
+    zgen prezto utility
+    zgen prezto completion
+    zgen prezto prompt
+    zgen prezto git
+    zgen prezto osx
+    zgen prezto command-not-found
+    zgen prezto syntax-highlighting
+
+    zgen save
+  fi
+
 fi
+
+#
+# ZSH Settings
+#
+
+unsetopt sharehistory
 
 #
 # Aliases
@@ -37,3 +79,4 @@ fi
 if [[ -s "$HOME/.zsh/zlocal" ]]; then
   source ~/.zsh/zlocal
 fi
+
