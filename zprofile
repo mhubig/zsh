@@ -87,15 +87,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 #
-# VM Stuff
-#
-#eval "$(docker-machine env develop)"
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.64.2:2376"
-export DOCKER_CERT_PATH="$HOME/.docker/machine/machines/develop"
-export DOCKER_MACHINE_NAME="develop"
-
-#
 # Homebrew setings
 #
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
