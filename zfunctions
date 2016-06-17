@@ -39,3 +39,10 @@ ssh-copy-id () {
         command cat $1 | ssh $2 "cat - >> ~/.ssh/authorized_keys"
     fi
 }
+
+# take screenshot from android device
+screencap() {
+    adb shell screencap -p \
+        | perl -pe 's/\x0D\x0A/\x0A/g' \
+        > screen-$(date +%s%3N).png
+}
