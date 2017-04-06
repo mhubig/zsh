@@ -78,8 +78,8 @@ fi
 # Editor
 #
 if [[ "$OSTYPE" == darwin* ]]; then
-  export EDITOR='code'
-  export VISUAL='code'
+  export EDITOR='code -n'
+  export VISUAL='code -n'
   export PAGER='less'
 fi
 
@@ -113,17 +113,13 @@ export GOPATH=$HOME/Development/go
 export CFLAGS="-I$(brew --prefix openssl)/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 
-# # Load pyenv automatically
-# export PYENV_ROOT=/usr/local/var/pyenv
-# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-# 
-# if which pyenv > /dev/null; then
-#     eval "$(pyenv init -)";
-# fi
-# 
-# if which pyenv-virtualenv-init > /dev/null; then
-#     eval "$(pyenv virtualenv-init -)";
-# fi
+# Load pyenv automatically
+export PYENV_ROOT=/usr/local/var/pyenv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+if which pyenv > /dev/null; then
+    eval "$(pyenv init -)";
+fi
 
 #
 # Direnv

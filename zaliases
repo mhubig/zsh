@@ -13,15 +13,11 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 if [[ "$OSTYPE" =~ ^darwin ]]; then
-    #alias  vim='mvim -p'                     # open in new window
-    #alias rvim='mvim -p --remote-tab-silent' # open in existing window
-
     if [[ -e /usr/local/bin/gdate ]]; then
         alias date='gdate'
     fi
 fi
 
 if [[ "$OSTYPE" =~ ^linux  ]]; then
-    #alias  vim='gvim -p'                     # open in new window
-    #alias rvim='mvim -p --remote-tab-silent' # open in existing window
+  # nothing to show for now
 fi
