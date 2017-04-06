@@ -79,4 +79,3 @@ fi
 if [[ -s "$HOME/.zsh/zlocal" ]]; then
   source ~/.zsh/zlocal
 fi
-

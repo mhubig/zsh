@@ -34,7 +34,10 @@ cdpath=(
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $HOME/bin
+  $HOME/.local/bin
+  $HOME/Development/go
+  $HOME/Library/Android/sdk/platform-tools
+  /usr/local/opt/go/libexec/bin
   /usr/local/opt/ruby/bin
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
@@ -63,7 +66,7 @@ fi
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
 # Remove -X and -F (exit if the content fits on one screen) to enable it.
 export LESS='-F -g -i -M -R -S -w -X -z-4'
-export LESSEDIT='mvim ?lm+%lm. %f'
+export LESSEDIT='vim ?lm+%lm. %f'
 
 # Set the Less input preprocessor.
 if (( $+commands[lesspipe.sh] )); then
@@ -74,8 +77,8 @@ fi
 # Editor
 #
 if [[ "$OSTYPE" == darwin* ]]; then
-  export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
-  export VISUAL='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+  export EDITOR='code'
+  export VISUAL='code'
   export PAGER='less'
 fi
 
@@ -102,22 +105,29 @@ export ANSIBLE_HOSTS=hosts
 #
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/Development/go
-export PATH=$GOROOT/bin:$PATH
-export PATH=$GOPATH/bin:$PATH
 
 #
 # Python stuff
 #
-# Load pyenv automatically
-export PYENV_ROOT=/usr/local/var/pyenv
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export CFLAGS="-I$(brew --prefix openssl)/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 
-if which pyenv > /dev/null; then
-    eval "$(pyenv init -)";
-fi
+# # Load pyenv automatically
+# export PYENV_ROOT=/usr/local/var/pyenv
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+# 
+# if which pyenv > /dev/null; then
+#     eval "$(pyenv init -)";
+# fi
+# 
+# if which pyenv-virtualenv-init > /dev/null; then
+#     eval "$(pyenv virtualenv-init -)";
+# fi
 
-if which pyenv-virtualenv-init > /dev/null; then
-    eval "$(pyenv virtualenv-init -)";
+#
+# Direnv
+#
+
+if which direnv > /dev/null; then
+    eval "$(direnv hook zsh)";
 fi
