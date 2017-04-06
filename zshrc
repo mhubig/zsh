@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 #
 # Executes commands at the start of an interactive session.
 #
