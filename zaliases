@@ -8,9 +8,12 @@
 
 alias ls='ls -G'
 alias l='ls -alG'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+
+if [[ -e /usr/local/bin/rg ]]; then
+    alias grep='rg'
+    alias fgrep='rg'
+    alias egrep='rg'
+fi
 
 if [[ "$OSTYPE" =~ ^darwin ]]; then
     if [[ -e /usr/local/bin/gdate ]]; then

@@ -36,6 +36,8 @@ cdpath=(
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/.local/bin
+  $HOME/.local/share/pyenv
+  $HOME/.config/yarn/global/node_modules/.bin
   $HOME/Development/go
   $HOME/Library/Android/sdk/platform-tools
   /usr/local/opt/go/libexec/bin
@@ -46,19 +48,6 @@ path=(
   /usr/texbin
 )
 
-#
-# Temporary Files
-#
-
-if [[ ! -d "$TMPDIR" ]]; then
-  export TMPDIR="/tmp/$USER"
-  mkdir -p -m 700 "$TMPDIR"
-fi
-
-TMPPREFIX="${TMPDIR%/}/zsh"
-if [[ ! -d "$TMPPREFIX" ]]; then
-  mkdir -p "$TMPPREFIX"
-fi
 
 #
 # Less
@@ -112,13 +101,10 @@ export GOPATH=$HOME/Development/go
 #
 export CFLAGS="-I$(brew --prefix openssl)/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
+export PYENV_ROOT="$HOME/.local/share/pyenv"
 
-# Load pyenv automatically
-export PYENV_ROOT=/usr/local/var/pyenv
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
-if which pyenv > /dev/null; then
-    eval "$(pyenv init -)";
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
 
 #
